@@ -1,0 +1,102 @@
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light grey background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.document {
+    width: 100%;
+    max-width: 900px; /* Limit the width of the document container */
+    margin: 20px;
+    padding: 20px 0;
+    overflow-y: auto; /* Vertical scrolling */
+    box-sizing: border-box;
+    background-color: #f0f0f0; /* Match body background */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.paper{
+    width: 210mm; /* A4 width */
+    height: 297mm; /* A4 height */
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    box-sizing: border-box;
+    position: relative;
+    page-break-after: always; /* Ensure pages are separate */
+}
+
+.scene-heading{
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    font-size: 12;
+    margin-bottom: 12px;
+}
+
+.action{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12;
+    margin-bottom: 12px;
+}
+.character{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.dialogue{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.paranthetical{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.paranthetical::before{
+    content: "(";
+    position: absolute;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12;
+}
+.paranthetical::after{
+    content: ")";
+    position: absolute; 
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12;
+}
+
+.page h1 {
+    margin-top: 0;
+}
+
+.page p {
+    margin-bottom: 0;
+}
+
+
+
+/*Highlighting the current line*/
+.line{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12;
+}
+.line:focus{
+    cursor: text;
+}
